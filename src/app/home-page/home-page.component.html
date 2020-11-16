@@ -1,0 +1,17 @@
+<p>home-page works!</p>
+
+
+<h1>{{title}}</h1>
+<p>{{ now | date:'shortDate' }}</p>
+
+<button (click)="raiseAlert()" >ALERT</button>
+
+<ul *ngIf="cities">
+  <li *ngFor="let city of cities" 
+    [title]="city.tooltip"
+  
+  >
+  <a [routerLink]="['/city',city.name]"> {{ city.name }} </a>
+
+  </li>
+</ul>
